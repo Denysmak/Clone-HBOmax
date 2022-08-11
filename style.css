@@ -7,6 +7,7 @@ body{
     display: flex;
     flex-direction: column;
     align-items: center;
+    height: 100vh;
 }
 main{
     /* border: 2px solid white; */
@@ -75,8 +76,8 @@ header{
     margin: 15px;
 }
 .usuario p{
-    font-size: 0.9rem;
-    margin-top: 15px;
+    font-size: 1rem;
+    margin-top: 12px;
 }
 .usuario-border{
     padding: 4px;
@@ -121,29 +122,46 @@ footer{
     flex-direction: column;
     align-items: center;
     align-self: flex-end;
-    margin-bottom: 15%;
+    margin-bottom: 10%;
 }
 .adicionar{
     color: white;
     display: flex;
-    width: 351px;
+    width: 362px;
     justify-content: space-between;
 }
 .adiciona{
     border-radius: 4px;
+    height: 20px;
+    width: 140px;
     padding: 12px 17px;
     background-color: rgba(98, 89, 89, 0.51);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.adiciona:hover{
+    background-color: black;
+    border: 2px solid rgb(130, 79, 169);
+}
+.adiciona h5{
+    font-size: 0.8rem;
 }
 .gerenciar{
+    padding: 3px 6px;
     margin-top: 18px;
     height: 30px;
     width: 145px;
     display: flex;
     align-items: center;
+    border-radius: 4px;
     justify-content: center;
 }
 .gerenciar h6{
     font-weight: 900;
+}
+.gerenciar:hover{
+    background-color: rgba(153, 148, 148, 0.51);
 }
 
 
@@ -154,6 +172,10 @@ footer{
         font-family: 'Roboto Slab', serif;
         font-size: 1.6rem;
     }
+ .usuario p {
+     font-size: 0.9rem;
+     margin-top: 12px;
+ }
 }
 @media (max-width: 700px){
 .usuarios-container {
@@ -161,7 +183,7 @@ footer{
         top: 50%;
         left: 50%;
         transform: translate(-50%, -50%);
-        background-color: red;
+   
         width: 550px;
         flex-wrap: wrap;
         display: flex;
@@ -175,7 +197,6 @@ footer{
         top: 50%;
         left: 50%;
         transform: translate(-50%, -50%);
-        background-color: red;
         width: 350px;
         flex-wrap: wrap;
         display: flex;
