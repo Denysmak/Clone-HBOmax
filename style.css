@@ -1,3 +1,5 @@
+/* Fazer o hover dos perfis */
+
 *{
     margin: 0%;
     padding: 0%;
@@ -64,6 +66,7 @@ header{
     left: 50%;
     transform: translate(-50%, -50%);
     width: 700px;
+    /* height: 200px; */
     flex-wrap: wrap;
     display: flex;
     justify-content: space-around;
@@ -73,15 +76,28 @@ header{
     display: flex;
     flex-direction: column;
     align-items: center;
+    justify-content: flex-end;
     margin: 15px;
+    position: relative;
+    height: 150px;
+    width: 100px;
+
+    /* position: absolute; */
 }
 .usuario p{
     font-size: 1rem;
     margin-top: 12px;
+    justify-self: flex-start;
 }
 .usuario-border{
     padding: 4px;
     border-radius: 50%;
+    /* position: absolute; */
+    
+   
+    
+   
+
 }
 .usuario-border-azul{
     background-image: linear-gradient(to right, rgb(162, 235, 253), rgb(5, 191, 220));
@@ -102,7 +118,6 @@ header{
     background-image: linear-gradient(to right, rgb(179, 76, 220), rgb(120, 1, 184));
 }
 .usuario-foto{
-   
     height: 115px;
     width: 115px;
     border-radius: 50%;
@@ -141,6 +156,8 @@ footer{
     align-items: center;
 }
 .adiciona:hover{
+    height: 16px;
+    width: 136px;
     background-color: black;
     border: 2px solid rgb(130, 79, 169);
 }
@@ -164,6 +181,72 @@ footer{
     background-color: rgba(153, 148, 148, 0.51);
 }
 
+.perfilMaior{
+    animation-name: perfilM;
+    animation-duration: 0.4s;
+    height: 130px;
+    width: 130px;
+}
+
+@keyframes perfilM{
+    0%{
+        height: 115px;
+        width: 115px;
+    }
+    100%{
+        height: 130px;
+        width: 130px;
+    }
+}
+.perfilMenor {
+    animation-name: perfilm;
+    animation-duration: 0.4s;
+    height: 115px;
+    width: 115px;
+}
+
+@keyframes perfilm {
+    0% {
+        height: 135px;
+        width: 135px;
+    }
+
+    100% {
+        height: 115px;
+        width: 115px;
+    }
+}
+.fontMaior {
+    animation-name: fontM;
+    animation-duration: 0.4s;
+    
+}
+@keyframes fontM {
+    0% {
+        font-size: 1rem;
+    }
+
+    100% {
+        font-size: 1.2rem;
+    }
+}
+
+.fontMenor {
+    animation-name: fontm;
+    animation-duration: 0.4s;
+    
+    
+}
+
+@keyframes fontm {
+    0% {
+        font-size: 1.2rem;
+    }
+
+    100% {
+        font-size:1rem
+    }
+}
 
 /* ============================ */
 @media (max-width:1000px){
@@ -184,7 +267,7 @@ footer{
         left: 50%;
         transform: translate(-50%, -50%);
    
-        width: 550px;
+        width: 500px;
         flex-wrap: wrap;
         display: flex;
         justify-content: space-around;
