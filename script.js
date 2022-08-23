@@ -11,6 +11,7 @@ const adicionaCrianca = document.querySelector(".adicionaCrianca");
 const gerenciarTextOne = document.getElementById("gerenciarTextOne");
 const gerenciarTextTwo = document.getElementById("gerenciarTextTwo");
 const adicionar = document.querySelector(".adicionar");
+let mainTitle = document.querySelector(".QEA")
 let gerenciarX = true;
 
 let hoverMaior = (e) => {
@@ -49,6 +50,7 @@ gerenciarButton.addEventListener('click', () => {
     gerenciarTextOne.style.display = "none"
     gerenciarTextTwo.style.display = "flex"
     gerenciarX = false
+    mainTitle.innerText = "Gerenciar perfis"
     }
     else{
         gerenciarAt.forEach(ga => {
@@ -65,7 +67,7 @@ gerenciarButton.addEventListener('click', () => {
         gerenciarTextOne.style.display = "flex"
         gerenciarTextTwo.style.display = "none"
         gerenciarX = true
-        
+        mainTitle.innerText = "Quem está assistindo?"
     }
 
 });
