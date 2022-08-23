@@ -6,6 +6,7 @@
 }
 body{
     background-image: linear-gradient(black,rgb(23, 1, 49));
+
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -89,7 +90,7 @@ header{
     margin-top: 12px;
     justify-self: flex-start;
 }
-.usuario-border{
+.ub{
     padding: 4px;
     border-radius: 50%;
     /* position: absolute; */
@@ -117,7 +118,7 @@ header{
 .usuario-border-roxo2{
     background-image: linear-gradient(to right, rgb(179, 76, 220), rgb(120, 1, 184));
 }
-.usuario-foto{
+.uf{
     height: 115px;
     width: 115px;
     border-radius: 50%;
@@ -125,10 +126,12 @@ header{
     align-items: center;
     justify-content: center;
 }
- .usuario-foto h1{
+ .uf h1{
     font-size: 3rem;
     font-family: Arial, Helvetica, sans-serif;
     color: white;
+    position: absolute;
+    z-index: 0;
 } 
 footer{
     color: white;
@@ -139,11 +142,17 @@ footer{
     align-self: flex-end;
     margin-bottom: 10%;
 }
-.adicionar{
+.adicionar-container{
     color: white;
     display: flex;
     width: 362px;
     justify-content: space-between;
+}
+.adicionar{
+    display: flex;
+    width: 362px;
+    justify-content: space-between;
+    
 }
 .adiciona{
     border-radius: 4px;
@@ -164,30 +173,31 @@ footer{
 .adiciona h5{
     font-size: 0.8rem;
 }
-.gerenciar{
-    padding: 3px 6px;
+.gerenciar-button{
+    padding: 10px 20px;
     margin-top: 18px;
-    height: 30px;
-    width: 145px;
+    /* height: 30px;
+    width: 145px; */
     display: flex;
     align-items: center;
     border-radius: 4px;
     justify-content: center;
 }
-.gerenciar h6{
+.gerenciar-button h6{
     font-weight: 900;
 }
-.gerenciar:hover{
+.gerenciar-button:hover{
     background-color: rgba(153, 148, 148, 0.51);
 }
-
+#gerenciarTextTwo{
+    display: none;
+}
 .perfilMaior{
     animation-name: perfilM;
     animation-duration: 0.4s;
     height: 130px;
     width: 130px;
 }
-
 @keyframes perfilM{
     0%{
         height: 115px;
@@ -204,7 +214,6 @@ footer{
     height: 115px;
     width: 115px;
 }
-
 @keyframes perfilm {
     0% {
         height: 130px;
@@ -218,36 +227,46 @@ footer{
 }
 .fontMaior {
     animation-name: fontM;
-    animation-duration: 0.4s;
-    
+    animation-duration: 0.4s;   
 }
 @keyframes fontM {
     0% {
         font-size: 1rem;
     }
-
     100% {
         font-size: 1.2rem;
     }
 }
-
 .fontMenor {
     animation-name: fontm;
-    animation-duration: 0.4s;
-    
-    
+    animation-duration: 0.4s;   
 }
-
 @keyframes fontm {
     0% {
         font-size: 1.2rem;
     }
-
     100% {
         font-size:1rem
     }
 }
-
+.ga{
+    background-color: rgba(0, 0, 0, 0.85);
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    z-index: 1;
+    display: none;
+}
+.penAndPaperImg{
+    width: 20px;
+    height: 20px;
+    background-image: url(./assets/penAndPaper.png);
+    background-position: center;
+    background-size: contain;
+}
 /* ============================ */
 @media (max-width:1000px){
 .QEA {
@@ -257,7 +276,7 @@ footer{
     }
  .usuario p {
      font-size: 0.9rem;
-     margin-top: 12px;
+     margin-top: 12px
  }
 }
 @media (max-width: 700px){
@@ -265,8 +284,7 @@ footer{
         position: absolute;
         top: 50%;
         left: 50%;
-        transform: translate(-50%, -50%);
-   
+        transform: translate(-50%, -50%);  
         width: 500px;
         flex-wrap: wrap;
         display: flex;
