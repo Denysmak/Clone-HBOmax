@@ -1,0 +1,65 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link rel="stylesheet" type="text/css" href="./styleEditarPerfil.css">
+    <link rel="icon" href="../assets/icone.png">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@400;500;600;700&family=Josefin+Sans:wght@400;500;600;700&family=Roboto+Slab:wght@600;700&display=swap"
+        rel="stylesheet">
+    <title>Perfil</title>
+</head>
+
+<body>
+    <main>
+        <header>
+            <div class="hbomax">
+                <img class="hbomax-image" src="../assets/hboLogo.png" alt="">
+                <h1 class="hbomax-text">max</h1>
+            </div>
+            <h1 class="QEA">Editar perfil</h1>
+        </header>
+        <div class="usuarios-container">
+            <div id="joana" class="usuario">
+                <div class="ub usuario-border-azul">
+                    <div onmouseover="hoverMaior(this)" onmouseleave="hoverMenor(this)" class="uf u1">
+                        <img class="user" src="../assets/user.png" alt="">
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="inputNomeFoto">
+            <div class="carregarFoto">
+                <img id="camera" src="../assets/camera.png" alt="">
+                <small>Quer carregar uma foto? Use nosso aplicativo móvel.</small>
+            </div>
+            <div class="circles">
+                <div class="circle circle1"></div>
+                <div class="circle circle2"></div>
+                <div class="circle circle3"></div>
+                <div class="circle circle4"></div>
+                <div class="circle circle5"></div>
+            </div>
+            <input type="text" name="changeTitle" id="changeTitle">
+        </div>
+        <footer>
+            <div class="adicionar-container">
+                <div class="adicionar">
+                    <div class="adiciona adicionaAdulto">
+                        <h5>SALVAR</h5>
+                    </div>
+                    <div class="adiciona adicionaCrianca">
+                        <h5>CANCELAR</h5>
+                    </div>
+                </div>
+            </div>
+            <div class="gerenciar-button">
+                <h6 id="gerenciarTextOne">EXCLUIR</h6>
+            </div>
+        </footer>
+    </main>
+    <script src="./scriptEditarPerfil.js"></script>
+</body>
+
+</html>
